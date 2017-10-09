@@ -22,7 +22,12 @@
   import 'bulma/css/bulma.css';
 
   export default {
-    props: ['links'],
+    props: {
+      links: {
+        type: Array,
+        required: true,
+      },
+    },
   };
 </script>
 

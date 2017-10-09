@@ -1,6 +1,6 @@
 <template>
   <div
-    class="loader"
+    class="loader is-loading"
     v-if="!isLoaded"
   >
     Loading ...
@@ -46,6 +46,12 @@
   export default {
     name: 'user-list',
 
+    props: {
+      RowsPerPage: {
+        type: Number,
+      },
+    },
+
     data() {
       return {
         users: [],
@@ -55,8 +61,12 @@
     },
 
     computed: {
+      rowsCount() {
+        return this.users.length;
+      },
+
       filteredUsers() {
-        return this.users;
+        return this.users.slice(0, this.RowsPerPage);
       },
     },
 
