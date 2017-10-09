@@ -1,13 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <header>
+     <Navigation :links="links"></Navigation>
+    </header>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation';
+
 export default {
   name: 'app',
+  components: {
+    Navigation,
+  },
+  data() {
+    return {
+      links: [
+        {
+          name: 'Home',
+          path: '/',
+        },
+        {
+          name: 'Users',
+          path: '/users',
+        },
+      ],
+    };
+  },
 };
 </script>
 
