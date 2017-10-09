@@ -24,7 +24,7 @@
           v-for="user in filteredUsers"
           :key="user.id"
         >
-          <router-link tag="td" :to="`/user/${user.id}`">
+          <router-link tag="td" :to="`/users/${user.id}`">
             <a>
               {{ user.id }}
             </a>
@@ -86,6 +86,8 @@
 
     methods: {
       getUsers() {
+        this.isLoaded = false;
+
         axios.get(this.endpoint)
           .then((response) => {
             this.users = response.data;
