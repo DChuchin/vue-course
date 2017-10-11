@@ -1,9 +1,11 @@
 <template>
   <div>
-    <header>
-      <rows-picker v-model.number="RowsPerPage"></rows-picker>
-    </header>
-    <user-list :RowsPerPage="RowsPerPage"></user-list>
+    <div class="container is-widescreen">
+      <header>
+        <rows-picker v-model.number="RowsPerPage"></rows-picker>
+      </header>
+      <user-list :RowsPerPage="RowsPerPage"></user-list>
+    </div>
   </div>
 </template>
 

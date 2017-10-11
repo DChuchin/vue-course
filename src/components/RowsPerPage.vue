@@ -1,17 +1,22 @@
 <template>
-  <div class="select">
-    <select
-      :value="value"
-      @input="changed"
-    >
-      <option
-        v-for="item in list"
-        :value="item"
-        :key="item"
+  <div>
+    <div class="select">
+      <select
+        :value="value"
+        @input="changed"
       >
-        {{ item }}
-      </option>
-    </select>
+        <option
+          v-for="item in list"
+          :value="item"
+          :key="item"
+        >
+          {{ item }}
+        </option>
+      </select>
+    </div>
+    <span>
+      Показано {{ value }} на странице
+    </span>
   </div>
 </template>
 

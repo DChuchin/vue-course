@@ -3,10 +3,9 @@
     class="loader is-loading"
     v-if="!isLoaded"
   >
-    Loading ...
   </div>
   <div v-else>
-    <table class="table is-striped">
+    <table class="table is-striped is-fullwidth">
       <thead>
         <tr>
           <th>#</th>

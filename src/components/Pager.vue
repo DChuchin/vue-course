@@ -1,7 +1,19 @@
 <template>
   <nav class="pagination" v-if="pagesCount > 1">
-    <a class="pagination-previous" @click="prevPage" :disabled="currentPage === 1">Previous</a>
-    <a class="pagination-next" @click="nextPage" :disabled="currentPage === pagesCount">Next page</a>
+    <a
+      class="pagination-previous"
+      @click="prevPage"
+      :disabled="currentPage === 1"
+    >
+      Previous
+    </a>
+    <a
+      class="pagination-next"
+      @click="nextPage"
+      :disabled="currentPage === pagesCount"
+    >
+      Next page
+    </a>
     <ul class="pagination-list">
       <li v-for="page in pagesCount">
         <a 
